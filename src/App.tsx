@@ -1,3 +1,17 @@
+// import React from "react";
+import CourseGoals from "./components/CourseGoals";
+
 export default function App() {
-  return <h1>Let's get started!</h1>;
+  return (
+  <main>
+       <CourseGoals  title="Learn React + TypeScript">
+      <p>Learn it from ground up</p>
+    </CourseGoals >
+    </main>
+
+)
 }
+
+
+ {/* */}
+ 
