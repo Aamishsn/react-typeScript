@@ -25,13 +25,19 @@ export default function App() {
       ];
     });
   };
+
+  const handleDelete=(id:number)=>{
+    setCourseGoals((prevGoals)=>{
+      return prevGoals.filter((goal)=>goal.id!==id)
+    })
+  }
   return (
     <main>
       <Header image={{ src: goalImg, alt: "Goals" }}>
         <h1>Your Course Goals</h1>
       </Header>
       <button onClick={handleAddGoal}>Add New Goal</button>
-      <CourseGoalList courseGoals={courseGoals} /> 
+      <CourseGoalList courseGoals={courseGoals} onDeleteGoal={handleDelete}/> 
     </main>
   );
 }

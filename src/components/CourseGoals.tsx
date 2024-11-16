@@ -1,13 +1,13 @@
 import  {type ReactNode} from 'react'  
 
-const CourseGoals = ( {title,children}:{title:string,children:ReactNode}) => {
+const CourseGoals = ( {id, title,children, onDeleteGoal}:{id:number, title:string,children:ReactNode, onDeleteGoal:(id:number)=>void}) => {
   return (
     <article>
         <div>
             <h2>{title}</h2>
             {children}
         </div>
-        <button>Delete</button>
+        <button onClick={()=>onDeleteGoal(id)}>Delete</button>
     </article>
   )
 }
